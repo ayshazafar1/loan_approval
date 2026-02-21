@@ -17,9 +17,9 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 ####################################################################################################
 # Streamlit Page Config
 ####################################################################################################
-st.set_page_config(page_title="💵 Loan Approval Predictor", layout="wide")
+st.set_page_config(page_title=" Loan Approval Predictor", layout="wide")
 
-st.title("💵 Loan Approval Prediction")
+st.title(" Loan Approval Prediction")
 st.caption("Machine Learning classification project using Logistic Regression (practice purpose).")
 
 
@@ -124,11 +124,11 @@ model, metrics, feature_order = train_model(df)
 left, right = st.columns(2)
 
 with left:
-    st.subheader("📄 Data Preview")
+    st.subheader(" Data Preview")
     st.dataframe(df.head(10), use_container_width=True)
 
 with right:
-    st.subheader("📊 Model Performance (Test Set)")
+    st.subheader(" Model Performance (Test Set)")
 
     st.write({
         "Accuracy": round(metrics["accuracy"], 4),
@@ -209,9 +209,10 @@ if st.button("Predict Approval"):
     prediction = int(prob >= 0.5)
 
     if prediction == 1:
-        st.success(f"✅ {applicant_name}: APPROVED (Probability: {prob:.2%})")
+        st.success(f" {applicant_name}: APPROVED (Probability: {prob:.2%})")
     else:
-        st.error(f"❌ {applicant_name}: REJECTED (Probability: {prob:.2%})")
+        st.error(f" {applicant_name}: REJECTED (Probability: {prob:.2%})")
+
 
 
 
