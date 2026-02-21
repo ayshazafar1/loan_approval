@@ -154,7 +154,7 @@ st.divider()
 ####################################################################################################
 # Prediction UI
 ####################################################################################################
-st.subheader("🧪 Try a Prediction")
+st.subheader(" Try a Prediction")
 
 c1, c2, c3, c4 = st.columns(4)
 
@@ -212,6 +212,7 @@ if st.button("Predict Approval"):
         st.success(f" {applicant_name}: APPROVED (Probability: {prob:.2%})")
     else:
         st.error(f" {applicant_name}: REJECTED (Probability: {prob:.2%})")
+
 
 
 
